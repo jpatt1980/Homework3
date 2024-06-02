@@ -1,0 +1,59 @@
+---
+title: "Reading and Manipulating Data"
+format: html
+editor: visual
+---
+
+## Task 1: Conceptual Questions
+
+### 1. If your working directory is myfolder/homework/, what relative path would you specify to get the file located at myfolder/MyData.csv?
+
+> A: myfolder/MyData.csv
+
+### 2. What are the major benefits of using R projects?
+
+> A:
+
+### 3. What is git and what is github?
+
+> A: git is a software package that allows the users to implement version control of coding changes while github is an online location (hub) where multiple people can collaborate on developing code using projects and branches and the git verison control software.
+
+### 4. What are the two main differences between a tibble and a data.frame?
+
+> A: A tibble is a data frame that is described as "lazy" becasue it provides more warnings and requires more explicit coding than a data frame, for it to perform tasks properly. This resutls in cleaner, more explicit coding that ensures a quality analysis.
+
+### 5. Rewrite the following nested function call using baseR’s chaining operator:
+
+> arrange(filter(select(as_tibble(iris), starts_with("Petal"), Species), Petal.Length \< 1.55), Species)
+
+```{r}
+as_tibble(iris) |>
+  filter(startsWith("Petal"), Petal.Length < 1.55 ) |>
+  arrange(Species)
+```
+
+### 6. What is meant by long format data and wide format data? Which do we generally prefer for statistical analysis?
+
+> A: Long format data is where each row of data has only one observation and each column has only one variable. Wide format data is where each row of data has multiple observations and each column can have multiple variables. We generally prefer long format data for statistical analysis.
+
+## Task 2: Reading Delimited Data
+
+### Glass Data
+
+> 1.  Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).
+
+```{r}
+
+```
+
+> 2.  Start a chain that would overwrite the Type_of_glass variable using mutate(). Create a character string version (that is, replace 1 with “building_windows_float_processed”, 2 with “building_win. . . ”, etc.) instead (see the variable descriptions above to give meaningful values). (If you are familiar with factors, feel free to use that instead of a character string variable - otherwise, think if/then/else via ifelse().)
+
+```{r}
+
+```
+
+> 3.  Continue your chain and keep only observations where the Fe variable is less than 0.2 and the Type of Glass is either “tableware” or “headlamp”.
+
+```{r}
+
+```
