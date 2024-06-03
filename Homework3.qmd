@@ -4,6 +4,13 @@ format: html
 editor: visual
 ---
 
+```{r}
+library(tidyverse)
+library(readr)
+library(readxl)
+library(dplyr)
+```
+
 ## Task 1: Conceptual Questions
 
 ### 1. If your working directory is myfolder/homework/, what relative path would you specify to get the file located at myfolder/MyData.csv?
@@ -43,17 +50,64 @@ as_tibble(iris) |>
 > 1.  Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).
 
 ```{r}
-
+#read in data from file folder per professor Post instruction. 
+glass_data <- read_delim(
+  "glass.data",
+  delim = ",",
+  col_names = c("ID", "RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe", "Type"),
+  show_col_types = FALSE
+  )
+glass_data
+  
 ```
 
 > 2.  Start a chain that would overwrite the Type_of_glass variable using mutate(). Create a character string version (that is, replace 1 with “building_windows_float_processed”, 2 with “building_win. . . ”, etc.) instead (see the variable descriptions above to give meaningful values). (If you are familiar with factors, feel free to use that instead of a character string variable - otherwise, think if/then/else via ifelse().)
 
 ```{r}
 
+glass_data <- glass_data |>
+  mutate(Type = 
+    ifelse(Type == 1,
+           "building_windows_float",
+      ifelse(Type ==2, 
+             "bulidning_windows_non_float",
+        ifelse(Type == 3,
+               "vehicle_windows_float",
+          ifelse(Type == 4,
+                 "vehicle_windows_non_float",
+            ifelse(Type == 5,
+                   "containers",
+              ifelse(Type == 6,
+                     "tableware",
+                ifelse(Type == 7,
+                       "headlamps",
+                       "Error"))))))))
+
+glass_data
 ```
 
 > 3.  Continue your chain and keep only observations where the Fe variable is less than 0.2 and the Type of Glass is either “tableware” or “headlamp”.
 
 ```{r}
+glass_data <- glass_data |>
+  mutate(Type = 
+    ifelse(Type == 1,
+           "building_windows_float",
+      ifelse(Type ==2, 
+             "bulidning_windows_non_float",
+        ifelse(Type == 3,
+               "vehicle_windows_float",
+          ifelse(Type == 4,
+                 "vehicle_windows_non_float",
+            ifelse(Type == 5,
+                   "containers",
+              ifelse(Type == 6,
+                     "tableware",
+                ifelse(Type == 7,
+                       "headlamps",
+                       "Error")))))))) |>
+  filter(Type %in% "headlamps")
+#cannot get filter to work
 
+glass_data
 ```
