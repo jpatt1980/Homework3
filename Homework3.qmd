@@ -111,3 +111,26 @@ glass_data <- glass_data |>
 
 glass_data
 ```
+## Yeast Data
+
+### 1. Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).
+ 
+```{r}
+yeast_data <- read_table(
+  "yeast.data",
+  col_names = c("seq_name", "mcg", "gvh", "alm", "mit", "erl", "pox", "vac", "nuc", "class"),
+  show_col_types = FALSE
+  )
+
+yeast_data
+```
+  
+## 2. Start a chain that removes the seq_name and nuc columns.
+```{r}
+yeast_data <- yeast_data |>
+  mutate(
+    select(!seq_name & !nuc)
+)
+yeast_data
+```
+
