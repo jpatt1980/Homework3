@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
 ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
 ✔ purrr     1.0.2     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -177,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-are-the-major-benefits-of-using-r-projects" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-the-major-benefits-of-using-r-projects">2. What are the major benefits of using R projects?</h3>
 <blockquote class="blockquote">
-<p>A:</p>
+<p>A: The ability to use a single source software program that allows you to easily model a data set for analysis without learing a lot of syntax like you do with other sofware packages.</p>
 </blockquote>
 </section>
 <section id="what-is-git-and-what-is-github" class="level3">
@@ -245,25 +245,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>glass_data <span class="ot">&lt;-</span> glass_data <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>,</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"Error"</span>))))))))</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>glass_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cannot get code to operate properly, renders Type "Error" for every observation</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>, <span class="st">"Error"</span>))))))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 214 × 11
       ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type             
@@ -287,8 +286,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Fe <span class="sc">&lt;</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cannot get code to operate properly, renders Type "Error" for every observation</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>,</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"Error"</span>)))))))) <span class="sc">|&gt;</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Fe <span class="sc">&lt;</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 189 × 11
       ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type             
@@ -305,25 +322,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 10    12  1.52  12.8  3.66  1.27  73.0  0.6   8.56     0  0    building_windows…
 # ℹ 179 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cannot get filter to work properly</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>glass_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 214 × 11
-      ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type             
-   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;            
- 1     1  1.52  13.6  4.49  1.1   71.8  0.06  8.75     0  0    building_windows…
- 2     2  1.52  13.9  3.6   1.36  72.7  0.48  7.83     0  0    building_windows…
- 3     3  1.52  13.5  3.55  1.54  73.0  0.39  7.78     0  0    building_windows…
- 4     4  1.52  13.2  3.69  1.29  72.6  0.57  8.22     0  0    building_windows…
- 5     5  1.52  13.3  3.62  1.24  73.1  0.55  8.07     0  0    building_windows…
- 6     6  1.52  12.8  3.61  1.62  73.0  0.64  8.07     0  0.26 building_windows…
- 7     7  1.52  13.3  3.6   1.14  73.1  0.58  8.17     0  0    building_windows…
- 8     8  1.52  13.2  3.61  1.05  73.2  0.57  8.24     0  0    building_windows…
- 9     9  1.52  14.0  3.58  1.37  72.1  0.56  8.3      0  0    building_windows…
-10    10  1.52  13    3.6   1.36  73.0  0.57  8.4      0  0.11 building_windows…
-# ℹ 204 more rows</code></pre>
-</div>
 </div>
 </section>
 </section>
@@ -332,13 +330,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name." class="level3">
 <h3 class="anchored" data-anchor-id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name.">1. Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> <span class="fu">read_table</span>(</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"yeast.data"</span>,</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"seq_name"</span>, <span class="st">"mcg"</span>, <span class="st">"gvh"</span>, <span class="st">"alm"</span>, <span class="st">"mit"</span>, <span class="st">"erl"</span>, <span class="st">"pox"</span>, <span class="st">"vac"</span>, <span class="st">"nuc"</span>, <span class="st">"class"</span>),</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> <span class="fu">read_table</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"yeast.data"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"seq_name"</span>, <span class="st">"mcg"</span>, <span class="st">"gvh"</span>, <span class="st">"alm"</span>, <span class="st">"mit"</span>, <span class="st">"erl"</span>, <span class="st">"pox"</span>, <span class="st">"vac"</span>, <span class="st">"nuc"</span>, <span class="st">"class"</span>),</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,484 × 10
    seq_name     mcg   gvh   alm   mit   erl   pox   vac   nuc class
@@ -361,10 +359,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="start-a-chain-that-removes-the-seq_name-and-nuc-columns." class="level2">
 <h2 class="anchored" data-anchor-id="start-a-chain-that-removes-the-seq_name-and-nuc-columns.">2. Start a chain that removes the seq_name and nuc columns.</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> yeast_data <span class="sc">|&gt;</span> </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mcg<span class="sc">:</span>vac, class)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> yeast_data <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mcg<span class="sc">:</span>vac, class)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,484 × 8
      mcg   gvh   alm   mit   erl   pox   vac class
@@ -385,13 +383,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="continue-your-chain-to-add-columns-corresponding-to-the-mean-and-median-of-each-numeric-variable-mcg-gvh-alm-mit-erl-pox-and-vac-at-each-class-grouping-see-the-across-function-as-we-did-in-the-dplyr-video." class="level3">
 <h3 class="anchored" data-anchor-id="continue-your-chain-to-add-columns-corresponding-to-the-mean-and-median-of-each-numeric-variable-mcg-gvh-alm-mit-erl-pox-and-vac-at-each-class-grouping-see-the-across-function-as-we-did-in-the-dplyr-video.">3. Continue your chain to add columns corresponding to the mean and median of each numeric variable (mcg, gvh, alm, mit, erl, pox, and vac) at each class grouping (see the across() function as we did in the dplyr video!).</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> yeast_data <span class="sc">|&gt;</span> </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mcg<span class="sc">:</span>vac, class) <span class="sc">|&gt;</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">sd =</span> sd), <span class="at">.names =</span> <span class="st">"{.col}_{.fn}"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(class) <span class="sc">|&gt;</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(class) </span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> yeast_data <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mcg<span class="sc">:</span>vac, class) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">sd =</span> sd), <span class="at">.names =</span> <span class="st">"{.col}_{.fn}"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(class) <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(class) </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  yeast_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,484 × 22
 # Groups:   class [10]
@@ -427,8 +425,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>white_wine_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"white-wine.xlsx"</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>white_wine_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"white-wine.xlsx"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,898 × 12
    `fixed acidity` `volatile acidity` `citric acid` `residual sugar` chlorides
@@ -456,12 +454,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>• Read in the data from the 2nd sheet. This should return a data frame with one column containing alternative versions of the variable names. • Grab that column and overwrite the current column names (colnames()) of your white wine tibble</p>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>white_wine_variables <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"white-wine.xlsx"</span>,</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sheet =</span> <span class="fu">excel_sheets</span>(<span class="st">"white-wine.xlsx"</span>)[<span class="dv">2</span>])</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(white_wine_data) <span class="ot">&lt;-</span> white_wine_variables<span class="sc">$</span>Variables</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>white_wine_variables <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"white-wine.xlsx"</span>,</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sheet =</span> <span class="fu">excel_sheets</span>(<span class="st">"white-wine.xlsx"</span>)[<span class="dv">2</span>])</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(white_wine_data) <span class="ot">&lt;-</span> white_wine_variables<span class="sc">$</span>Variables</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,898 × 12
    fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
@@ -485,11 +483,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation." class="level2">
 <h2 class="anchored" data-anchor-id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation.">3. Lastly, add a column to this data set to indicate the wines are white. That is, add a column that has values of ‘white’ for every observation.</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> white_wine_data[<span class="dv">1</span>]){</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  white_wine_data<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"white"</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> white_wine_data[<span class="dv">1</span>]){</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  white_wine_data<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"white"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>white_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,898 × 13
    fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
@@ -517,87 +515,241 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>• Read this in using the readr package. Be careful that the columns are read in as the correct type! • You should replace the variable names as done above • You should append a column denoting the type as “red”</p>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>red_wine_data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"red-wine.csv"</span>,</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="at">delim =</span> <span class="st">";"</span>, </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"fixed_acidity"</span>,<span class="st">"volatile_acidity"</span>,<span class="st">"citric_acid"</span>,<span class="st">"residual_sugar"</span>,<span class="st">"chlorides"</span>,<span class="st">"free_sulfur_dioxide"</span>,<span class="st">"total_sulfur_dioxide"</span>,<span class="st">"density"</span>,<span class="st">"pH"</span>,<span class="st">"sulphates"</span>,<span class="st">"alcohol"</span>,<span class="st">"quality"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1600 Columns: 12
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ";"
-chr (12): fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(red_wine_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>red_wine_data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"red-wine.csv"</span>,</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="at">delim =</span> <span class="st">";"</span>, </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="at">col_names =</span> <span class="fu">c</span>(<span class="st">"fixed_acidity"</span>,<span class="st">"volatile_acidity"</span>,<span class="st">"citric_acid"</span>,<span class="st">"residual_sugar"</span>,<span class="st">"chlorides"</span>,<span class="st">"free_sulfur_dioxide"</span>,<span class="st">"total_sulfur_dioxide"</span>,<span class="st">"density"</span>,<span class="st">"pH"</span>,<span class="st">"sulphates"</span>,<span class="st">"alcohol"</span>,<span class="st">"quality"</span>),</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="at">skip =</span> <span class="dv">1</span>,</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> red_wine_data[<span class="dv">1</span>]){</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  red_wine_data<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"red"</span>)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>red_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>spc_tbl_ [1,600 × 12] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
- $ fixed_acidity       : chr [1:1600] "fixed acidity" "7.4" "7.8" "7.8" ...
- $ volatile_acidity    : chr [1:1600] "volatile acidity" "0.7" "0.88" "0.76" ...
- $ citric_acid         : chr [1:1600] "citric acid" "0" "0" "0.04" ...
- $ residual_sugar      : chr [1:1600] "residual sugar" "1.9" "2.6" "2.3" ...
- $ chlorides           : chr [1:1600] "chlorides" "0.076" "0.098" "0.092" ...
- $ free_sulfur_dioxide : chr [1:1600] "free sulfur dioxide" "11" "25" "15" ...
- $ total_sulfur_dioxide: chr [1:1600] "total sulfur dioxide" "34" "67" "54" ...
- $ density             : chr [1:1600] "density" "0.9978" "0.9968" "0.997" ...
- $ pH                  : chr [1:1600] "pH" "3.51" "3.2" "3.26" ...
- $ sulphates           : chr [1:1600] "sulphates" "0.56" "0.68" "0.65" ...
- $ alcohol             : chr [1:1600] "alcohol" "9.4" "9.8" "9.8" ...
- $ quality             : chr [1:1600] "quality" "5" "5" "5" ...
- - attr(*, "spec")=
-  .. cols(
-  ..   fixed_acidity = col_character(),
-  ..   volatile_acidity = col_character(),
-  ..   citric_acid = col_character(),
-  ..   residual_sugar = col_character(),
-  ..   chlorides = col_character(),
-  ..   free_sulfur_dioxide = col_character(),
-  ..   total_sulfur_dioxide = col_character(),
-  ..   density = col_character(),
-  ..   pH = col_character(),
-  ..   sulphates = col_character(),
-  ..   alcohol = col_character(),
-  ..   quality = col_character()
-  .. )
- - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>red_wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1,600 × 12
+<pre><code># A tibble: 1,599 × 13
    fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
-   &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;    
- 1 fixed acidity volatile acidity citric acid residual sugar chlorides
- 2 7.4           0.7              0           1.9            0.076    
- 3 7.8           0.88             0           2.6            0.098    
- 4 7.8           0.76             0.04        2.3            0.092    
- 5 11.2          0.28             0.56        1.9            0.075    
- 6 7.4           0.7              0           1.9            0.076    
- 7 7.4           0.66             0           1.8            0.075    
- 8 7.9           0.6              0.06        1.6            0.069    
- 9 7.3           0.65             0           1.2            0.065    
-10 7.8           0.58             0.02        2              0.073    
-# ℹ 1,590 more rows
-# ℹ 7 more variables: free_sulfur_dioxide &lt;chr&gt;, total_sulfur_dioxide &lt;chr&gt;,
-#   density &lt;chr&gt;, pH &lt;chr&gt;, sulphates &lt;chr&gt;, alcohol &lt;chr&gt;, quality &lt;chr&gt;</code></pre>
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+ 1           7.4             0.7         0               1.9     0.076
+ 2           7.8             0.88        0               2.6     0.098
+ 3           7.8             0.76        0.04            2.3     0.092
+ 4          11.2             0.28        0.56            1.9     0.075
+ 5           7.4             0.7         0               1.9     0.076
+ 6           7.4             0.66        0               1.8     0.075
+ 7           7.9             0.6         0.06            1.6     0.069
+ 8           7.3             0.65        0               1.2     0.065
+ 9           7.8             0.58        0.02            2       0.073
+10           7.5             0.5         0.36            6.1     0.071
+# ℹ 1,589 more rows
+# ℹ 8 more variables: free_sulfur_dioxide &lt;dbl&gt;, total_sulfur_dioxide &lt;dbl&gt;,
+#   density &lt;dbl&gt;, pH &lt;dbl&gt;, sulphates &lt;dbl&gt;, alcohol &lt;dbl&gt;, quality &lt;dbl&gt;,
+#   color &lt;chr&gt;</code></pre>
 </div>
 </div>
 <ol start="5" type="1">
-<li>Combine these two data sets into one data set. They both have the exact same columns so this is an easy append task! • Use the dplyr::bind_rows() function (see the help) to create one tibble containing all of the wine data.</li>
+<li>Combine these two data sets into one data set. They both have the exact same columns so this is an easy append task! &gt; • Use the dplyr::bind_rows() function (see the help) to create one tibble containing all of the wine data.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(white_wine_data, red_wine_data)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>wine_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6,497 × 13
+   fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+ 1             7             0.27        0.36           20.7     0.045
+ 2            63             0.3         0.34            1.6     0.049
+ 3            81             0.28        0.4             6.9     0.05 
+ 4            72             0.23        0.32            8.5     0.058
+ 5            72             0.23        0.32            8.5     0.058
+ 6            81             0.28        0.4             6.9     0.05 
+ 7            62             0.32        0.16            7       0.045
+ 8             7             0.27        0.36           20.7     0.045
+ 9            63             0.3         0.34            1.6     0.049
+10            81             0.22        0.43            1.5     0.044
+# ℹ 6,487 more rows
+# ℹ 8 more variables: free_sulfur_dioxide &lt;dbl&gt;, total_sulfur_dioxide &lt;dbl&gt;,
+#   density &lt;dbl&gt;, pH &lt;dbl&gt;, sulphates &lt;dbl&gt;, alcohol &lt;dbl&gt;, quality &lt;dbl&gt;,
+#   color &lt;chr&gt;</code></pre>
+</div>
+</div>
 <ol start="6" type="1">
 <li>Start a chain onr your new combined data object to filter the data to only look at high-quality wines (quality &gt; 6.5) and wines that have a reasonable alcohol value (alcohol &lt; 132).</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,206 × 13
+   fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+ 1            66             0.16        0.4             1.5     0.044
+ 2            66             0.17        0.38            1.5     0.032
+ 3            62             0.66        0.48            1.2     0.029
+ 4            62             0.66        0.48            1.2     0.029
+ 5            64             0.31        0.38            2.9     0.038
+ 6            68             0.26        0.42            1.7     0.049
+ 7            72             0.32        0.36            2       0.033
+ 8            74             0.18        0.31            1.4     0.058
+ 9            66             0.25        0.29            1.1     0.068
+10            62             0.16        0.33            1.1     0.057
+# ℹ 1,196 more rows
+# ℹ 8 more variables: free_sulfur_dioxide &lt;dbl&gt;, total_sulfur_dioxide &lt;dbl&gt;,
+#   density &lt;dbl&gt;, pH &lt;dbl&gt;, sulphates &lt;dbl&gt;, alcohol &lt;dbl&gt;, quality &lt;dbl&gt;,
+#   color &lt;chr&gt;</code></pre>
+</div>
+</div>
 <ol start="7" type="1">
 <li>Continue your chain to now sort the data from highest quality to lowest.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(quality))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,206 × 13
+   fixed_acidity volatile_acidity citric_acid residual_sugar chlorides
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+ 1            91             0.27        0.45           10.6     0.035
+ 2            66             0.36        0.29            1.6     0.021
+ 3            74             0.24        0.36            2       0.031
+ 4            69             0.36        0.34            4.2     0.018
+ 5            71             0.26        0.49            2.2     0.032
+ 6            62             0.66        0.48            1.2     0.029
+ 7            62             0.66        0.48            1.2     0.029
+ 8            68             0.26        0.42            1.7     0.049
+ 9            67             0.23        0.31            2.1     0.046
+10            67             0.23        0.31            2.1     0.046
+# ℹ 1,196 more rows
+# ℹ 8 more variables: free_sulfur_dioxide &lt;dbl&gt;, total_sulfur_dioxide &lt;dbl&gt;,
+#   density &lt;dbl&gt;, pH &lt;dbl&gt;, sulphates &lt;dbl&gt;, alcohol &lt;dbl&gt;, quality &lt;dbl&gt;,
+#   color &lt;chr&gt;</code></pre>
+</div>
+</div>
 <ol start="8" type="1">
 <li>Continue your chain to select only the variables that contain acid, the alcohol variable, the type variable, and the quality variable.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(quality)) <span class="sc">|&gt;</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">contains</span>(<span class="st">"acid"</span>), alcohol, color, quality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,206 × 6
+   fixed_acidity volatile_acidity citric_acid alcohol color quality
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+ 1            91             0.27        0.45     104 white       9
+ 2            66             0.36        0.29     124 white       9
+ 3            74             0.24        0.36     125 white       9
+ 4            69             0.36        0.34     127 white       9
+ 5            71             0.26        0.49     129 white       9
+ 6            62             0.66        0.48     128 white       8
+ 7            62             0.66        0.48     128 white       8
+ 8            68             0.26        0.42     105 white       8
+ 9            67             0.23        0.31     107 white       8
+10            67             0.23        0.31     107 white       8
+# ℹ 1,196 more rows</code></pre>
+</div>
+</div>
 <ol start="9" type="1">
 <li>Continue your chain to add the mean and standard deviation of the alcohol variable to the data set for each setting of the quality variable.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="ot">&lt;-</span> wine_data <span class="sc">|&gt;</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(quality)) <span class="sc">|&gt;</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">contains</span>(<span class="st">"acid"</span>), alcohol, color, quality)<span class="sc">|&gt;</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(color) <span class="sc">|&gt;</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">alcohol_mean =</span> <span class="fu">mean</span>(alcohol),</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">alcohol_sd   =</span> <span class="fu">sd</span>(alcohol)</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>wine_data </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,206 × 8
+# Groups:   color [2]
+   fixed_acidity volatile_acidity citric_acid alcohol color quality alcohol_mean
+           &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;        &lt;dbl&gt;
+ 1            91             0.27        0.45     104 white       9         96.6
+ 2            66             0.36        0.29     124 white       9         96.6
+ 3            74             0.24        0.36     125 white       9         96.6
+ 4            69             0.36        0.34     127 white       9         96.6
+ 5            71             0.26        0.49     129 white       9         96.6
+ 6            62             0.66        0.48     128 white       8         96.6
+ 7            62             0.66        0.48     128 white       8         96.6
+ 8            68             0.26        0.42     105 white       8         96.6
+ 9            67             0.23        0.31     107 white       8         96.6
+10            67             0.23        0.31     107 white       8         96.6
+# ℹ 1,196 more rows
+# ℹ 1 more variable: alcohol_sd &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="task-3-database-practice" class="level1">
+<h1>Task 3: Database Practice</h1>
+<section id="download-the-lahman.db-file-associated-with-the-connecting-to-databases-notesvideo." class="level2">
+<h2 class="anchored" data-anchor-id="download-the-lahman.db-file-associated-with-the-connecting-to-databases-notesvideo.">Download the Lahman.db file associated with the Connecting to Databases notes/video.</h2>
+<section id="connect-to-the-database-and-then-look-at-all-of-the-tables-in-the-database." class="level3">
+<h3 class="anchored" data-anchor-id="connect-to-the-database-and-then-look-at-all-of-the-tables-in-the-database.">1. Connect to the database and then look at all of the tables in the database.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'DBI' was built under R version 4.3.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">"lahman.db"</span>)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbListTables</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "AllstarFull"         "Appearances"         "AwardsManagers"     
+ [4] "AwardsPlayers"       "AwardsShareManagers" "AwardsSharePlayers" 
+ [7] "Batting"             "BattingPost"         "CollegePlaying"     
+[10] "Fielding"            "FieldingOF"          "FieldingOFsplit"    
+[13] "FieldingPost"        "HallOfFame"          "HomeGames"          
+[16] "LahmanData"          "Managers"            "ManagersHalf"       
+[19] "Parks"               "People"              "Pitching"           
+[22] "PitchingPost"        "Salaries"            "Schools"            
+[25] "SeriesPost"          "Teams"               "TeamsFranchises"    
+[28] "TeamsHalf"           "battingLabels"       "fieldingLabels"     
+[31] "pitchingLabels"     </code></pre>
+</div>
+</div>
+</section>
+<section id="use-the-tbl-function-and-dplyr-to-return-all-of-the-data-from-the-teams-table-for-the-year-2015." class="level3">
+<h3 class="anchored" data-anchor-id="use-the-tbl-function-and-dplyr-to-return-all-of-the-data-from-the-teams-table-for-the-year-2015.">2. Use the tbl() function and dplyr to return all of the data from the Teams table for the year 2015.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">tbl</span>(con, <span class="st">"Teams"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(yearID <span class="sc">%in%</span> <span class="dv">2015</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   SQL [?? x 48]
+# Database: sqlite 3.46.0 [S:\ST588-601\Homework3\lahman.db]
+   yearID lgID  teamID franchID divID  Rank     G Ghome     W     L DivWin WCWin
+    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+ 1   2015 NL    ARI    ARI      W         3   162    81    79    83 N      N    
+ 2   2015 NL    ATL    ATL      E         4   162    81    67    95 N      N    
+ 3   2015 AL    BAL    BAL      E         3   162    78    81    81 N      N    
+ 4   2015 AL    BOS    BOS      E         5   162    81    78    84 N      N    
+ 5   2015 AL    CHA    CHW      C         4   162    81    76    86 N      N    
+ 6   2015 NL    CHN    CHC      C         3   162    81    97    65 N      Y    
+ 7   2015 NL    CIN    CIN      C         5   162    81    64    98 N      N    
+ 8   2015 AL    CLE    CLE      C         3   161    80    81    80 N      N    
+ 9   2015 NL    COL    COL      W         5   162    81    68    94 N      N    
+10   2015 AL    DET    DET      C         5   161    81    74    87 N      N    
+# ℹ more rows
+# ℹ 36 more variables: LgWin &lt;chr&gt;, WSWin &lt;chr&gt;, R &lt;int&gt;, AB &lt;int&gt;, H &lt;int&gt;,
+#   X2B &lt;int&gt;, X3B &lt;int&gt;, HR &lt;int&gt;, BB &lt;int&gt;, SO &lt;int&gt;, SB &lt;int&gt;, CS &lt;int&gt;,
+#   HBP &lt;int&gt;, SF &lt;int&gt;, RA &lt;int&gt;, ER &lt;int&gt;, ERA &lt;dbl&gt;, CG &lt;int&gt;, SHO &lt;int&gt;,
+#   SV &lt;int&gt;, IPouts &lt;int&gt;, HA &lt;int&gt;, HRA &lt;int&gt;, BBA &lt;int&gt;, SOA &lt;int&gt;, E &lt;int&gt;,
+#   DP &lt;int&gt;, FP &lt;dbl&gt;, name &lt;chr&gt;, park &lt;chr&gt;, attendance &lt;int&gt;, BPF &lt;int&gt;,
+#   PPF &lt;int&gt;, teamIDBR &lt;chr&gt;, teamIDlahman45 &lt;chr&gt;, teamIDretro &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="repeat-the-above-by-using-the-sql-function-within-tbl-here-you-have-to-write-actual-sql." class="level3">
+<h3 class="anchored" data-anchor-id="repeat-the-above-by-using-the-sql-function-within-tbl-here-you-have-to-write-actual-sql.">3. Repeat the above by using the sql() function within tbl() (here you have to write actual SQL!).</h3>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
