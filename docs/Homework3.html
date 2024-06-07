@@ -194,8 +194,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="rewrite-the-following-nested-function-call-using-basers-chaining-operator" class="level3">
 <h3 class="anchored" data-anchor-id="rewrite-the-following-nested-function-call-using-basers-chaining-operator">5. Rewrite the following nested function call using baseR’s chaining operator:</h3>
+<blockquote class="blockquote">
 <p>arrange(filter(select(as_tibble(iris), starts_with(“Petal”), Species), Petal.Length &lt; 1.55), Species)</p>
-<p>#is re-written as as_tibble(iris) |&gt; filter(iris, starts_with(“Petal”), Petal.Length &lt; 1.55 )</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>is re-written as as_tibble(iris) |&gt; filter(iris, starts_with(“Petal”), Petal.Length &lt; 1.55 )</p>
+</blockquote>
 </section>
 <section id="what-is-meant-by-long-format-data-and-wide-format-data-which-do-we-generally-prefer-for-statistical-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-meant-by-long-format-data-and-wide-format-data-which-do-we-generally-prefer-for-statistical-analysis">6. What is meant by long format data and wide format data? Which do we generally prefer for statistical analysis?</h3>
@@ -208,11 +212,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="task-2-reading-delimited-data">Task 2: Reading Delimited Data</h2>
 <section id="glass-data" class="level3">
 <h3 class="anchored" data-anchor-id="glass-data">Glass Data</h3>
-<blockquote class="blockquote">
-<ol type="1">
-<li>Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).</li>
-</ol>
-</blockquote>
+</section>
+<section id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name." class="level3">
+<h3 class="anchored" data-anchor-id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name.">1. Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#read in data from file folder per professor Post instruction. </span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>glass_data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(</span>
@@ -239,30 +241,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 204 more rows</code></pre>
 </div>
 </div>
-<blockquote class="blockquote">
-<ol start="2" type="1">
-<li>Start a chain that would overwrite the Type_of_glass variable using mutate(). Create a character string version (that is, replace 1 with “building_windows_float_processed”, 2 with “building_win. . .”, etc.) instead (see the variable descriptions above to give meaningful values). (If you are familiar with factors, feel free to use that instead of a character string variable - otherwise, think if/then/else via ifelse().)</li>
-</ol>
-</blockquote>
+</section>
+<section id="start-a-chain-that-would-overwrite-the-type_of_glass-variable-using-mutate.-create-a-character-string-version-that-is-replace-1-with-building_windows_float_processed-2-with-building_win.-.-.-etc.-instead-see-the-variable-descriptions-above-to-give-meaningful-values.-if-you-are-familiar-with-factors-feel-free-to-use-that-instead-of-a-character-string-variable---otherwise-think-ifthenelse-via-ifelse." class="level3">
+<h3 class="anchored" data-anchor-id="start-a-chain-that-would-overwrite-the-type_of_glass-variable-using-mutate.-create-a-character-string-version-that-is-replace-1-with-building_windows_float_processed-2-with-building_win.-.-.-etc.-instead-see-the-variable-descriptions-above-to-give-meaningful-values.-if-you-are-familiar-with-factors-feel-free-to-use-that-instead-of-a-character-string-variable---otherwise-think-ifthenelse-via-ifelse.">2. Start a chain that would overwrite the Type_of_glass variable using mutate(). Create a character string version (that is, replace 1 with “building_windows_float_processed”, 2 with “building_win. . .”, etc.) instead (see the variable descriptions above to give meaningful values). (If you are familiar with factors, feel free to use that instead of a character string variable - otherwise, think if/then/else via ifelse().)</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cannot get code to operate properly, renders Type "Error" for every observation</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>, <span class="st">"Error"</span>))))))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>, <span class="st">"Missing"</span>))))))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 214 × 11
       ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type             
@@ -280,55 +278,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 204 more rows</code></pre>
 </div>
 </div>
-<blockquote class="blockquote">
-<ol start="3" type="1">
-<li>Continue your chain and keep only observations where the Fe variable is less than 0.2 and the Type of Glass is either “tableware” or “headlamp”.</li>
-</ol>
-</blockquote>
+</section>
+<section id="continue-your-chain-and-keep-only-observations-where-the-fe-variable-is-less-than-0.2-and-the-type-of-glass-is-either-tableware-or-headlamp." class="level3">
+<h3 class="anchored" data-anchor-id="continue-your-chain-and-keep-only-observations-where-the-fe-variable-is-less-than-0.2-and-the-type-of-glass-is-either-tableware-or-headlamp.">3. Continue your chain and keep only observations where the Fe variable is less than 0.2 and the Type of Glass is either “tableware” or “headlamp”.</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cannot get code to operate properly, renders Type "Error" for every observation</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>glass_data <span class="sc">|&gt;</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> </span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>,</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"Error"</span>)))))))) <span class="sc">|&gt;</span></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Fe <span class="sc">&lt;</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>glass_data <span class="ot">&lt;-</span> glass_data <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">1</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"building_windows_float"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ifelse</span>(Type <span class="sc">==</span><span class="dv">2</span>, </span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">"bulidning_windows_non_float"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">3</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"vehicle_windows_float"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">4</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"vehicle_windows_non_float"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">5</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"containers"</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">6</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"tableware"</span>,</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="dv">7</span>,</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"headlamps"</span>,                                          <span class="st">"Missing"</span>)))))))) <span class="sc">|&gt;</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Fe <span class="sc">&lt;</span> <span class="fl">0.2</span>, Type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"tableware"</span>, <span class="st">"headlamps"</span>))</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>glass_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 189 × 11
-      ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type             
-   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;            
- 1     1  1.52  13.6  4.49  1.1   71.8  0.06  8.75     0  0    building_windows…
- 2     2  1.52  13.9  3.6   1.36  72.7  0.48  7.83     0  0    building_windows…
- 3     3  1.52  13.5  3.55  1.54  73.0  0.39  7.78     0  0    building_windows…
- 4     4  1.52  13.2  3.69  1.29  72.6  0.57  8.22     0  0    building_windows…
- 5     5  1.52  13.3  3.62  1.24  73.1  0.55  8.07     0  0    building_windows…
- 6     7  1.52  13.3  3.6   1.14  73.1  0.58  8.17     0  0    building_windows…
- 7     8  1.52  13.2  3.61  1.05  73.2  0.57  8.24     0  0    building_windows…
- 8     9  1.52  14.0  3.58  1.37  72.1  0.56  8.3      0  0    building_windows…
- 9    10  1.52  13    3.6   1.36  73.0  0.57  8.4      0  0.11 building_windows…
-10    12  1.52  12.8  3.66  1.27  73.0  0.6   8.56     0  0    building_windows…
-# ℹ 179 more rows</code></pre>
+<pre><code># A tibble: 38 × 11
+      ID    RI    Na    Mg    Al    Si     K    Ca    Ba    Fe Type     
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    
+ 1   177  1.52  14    2.39  1.56  72.4  0     9.57  0        0 tableware
+ 2   178  1.52  13.8  2.41  1.19  72.8  0     9.77  0        0 tableware
+ 3   179  1.52  14.5  2.24  1.62  72.4  0     9.26  0        0 tableware
+ 4   180  1.52  14.1  2.19  1.66  72.7  0     9.32  0        0 tableware
+ 5   181  1.51  14.4  1.74  1.54  74.6  0     7.59  0        0 tableware
+ 6   182  1.52  15.0  0.78  1.74  72.5  0     9.95  0        0 tableware
+ 7   183  1.52  14.2  0     2.09  72.7  0    10.9   0        0 tableware
+ 8   184  1.52  14.6  0     0.56  73.5  0    11.2   0        0 tableware
+ 9   185  1.51  17.4  0     0.34  75.4  0     6.65  0        0 tableware
+10   186  1.51  13.7  3.2   1.81  72.8  1.76  5.43  1.19     0 headlamps
+# ℹ 28 more rows</code></pre>
 </div>
 </div>
 </section>
 </section>
 <section id="yeast-data" class="level2">
 <h2 class="anchored" data-anchor-id="yeast-data">Yeast Data</h2>
-<section id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name." class="level3">
-<h3 class="anchored" data-anchor-id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name.">1. Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).</h3>
+<section id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name.-1" class="level3">
+<h3 class="anchored" data-anchor-id="read-this-data-into-r-directly-from-the-url-using-functions-from-the-tidyverse.-notice-that-the-data-doesnt-include-column-names---add-those-in-a-manner-of-your-choosing.-print-out-the-tibble-just-call-the-object-name.-1">1. Read this data into R directly from the URL using functions from the tidyverse. Notice that the data doesn’t include column names - add those (in a manner of your choosing). Print out the tibble (just call the object name).</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> <span class="fu">read_table</span>(</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"yeast.data"</span>,</span>
@@ -355,9 +350,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-</section>
-<section id="start-a-chain-that-removes-the-seq_name-and-nuc-columns." class="level2">
-<h2 class="anchored" data-anchor-id="start-a-chain-that-removes-the-seq_name-and-nuc-columns.">2. Start a chain that removes the seq_name and nuc columns.</h2>
+<section id="start-a-chain-that-removes-the-seq_name-and-nuc-columns." class="level3">
+<h3 class="anchored" data-anchor-id="start-a-chain-that-removes-the-seq_name-and-nuc-columns.">2. Start a chain that removes the seq_name and nuc columns.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>yeast_data <span class="ot">&lt;-</span> yeast_data <span class="sc">|&gt;</span> </span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mcg<span class="sc">:</span>vac, class)</span>
@@ -380,6 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 1,474 more rows</code></pre>
 </div>
 </div>
+</section>
 <section id="continue-your-chain-to-add-columns-corresponding-to-the-mean-and-median-of-each-numeric-variable-mcg-gvh-alm-mit-erl-pox-and-vac-at-each-class-grouping-see-the-across-function-as-we-did-in-the-dplyr-video." class="level3">
 <h3 class="anchored" data-anchor-id="continue-your-chain-to-add-columns-corresponding-to-the-mean-and-median-of-each-numeric-variable-mcg-gvh-alm-mit-erl-pox-and-vac-at-each-class-grouping-see-the-across-function-as-we-did-in-the-dplyr-video.">3. Continue your chain to add columns corresponding to the mean and median of each numeric variable (mcg, gvh, alm, mit, erl, pox, and vac) at each class grouping (see the across() function as we did in the dplyr video!).</h3>
 <div class="cell">
@@ -447,9 +442,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   alcohol &lt;dbl&gt;, quality &lt;dbl&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="when-you-print-the-data-set-out-to-the-console-you-may-notice-that-some-of-the-variable-names-are-surrounded-by-backticks.-this-is-because-they-are-non-standard-they-include-a-space-in-them.-we-can-rename-them-in-a-number-of-ways.-well-do-it-by-reading-in-the-variable-names-from-the-2nd-sheet-of-the-same-file." class="level2">
-<h2 class="anchored" data-anchor-id="when-you-print-the-data-set-out-to-the-console-you-may-notice-that-some-of-the-variable-names-are-surrounded-by-backticks.-this-is-because-they-are-non-standard-they-include-a-space-in-them.-we-can-rename-them-in-a-number-of-ways.-well-do-it-by-reading-in-the-variable-names-from-the-2nd-sheet-of-the-same-file.">2. When you print the data set out to the console, you may notice that some of the variable names are surrounded by backticks. This is because they are non-standard (they include a space in them). We can rename them in a number of ways. We’ll do it by reading in the variable names from the 2nd sheet of the same file.</h2>
+<section id="when-you-print-the-data-set-out-to-the-console-you-may-notice-that-some-of-the-variable-names-are-surrounded-by-backticks.-this-is-because-they-are-non-standard-they-include-a-space-in-them.-we-can-rename-them-in-a-number-of-ways.-well-do-it-by-reading-in-the-variable-names-from-the-2nd-sheet-of-the-same-file." class="level3">
+<h3 class="anchored" data-anchor-id="when-you-print-the-data-set-out-to-the-console-you-may-notice-that-some-of-the-variable-names-are-surrounded-by-backticks.-this-is-because-they-are-non-standard-they-include-a-space-in-them.-we-can-rename-them-in-a-number-of-ways.-well-do-it-by-reading-in-the-variable-names-from-the-2nd-sheet-of-the-same-file.">2. When you print the data set out to the console, you may notice that some of the variable names are surrounded by backticks. This is because they are non-standard (they include a space in them). We can rename them in a number of ways. We’ll do it by reading in the variable names from the 2nd sheet of the same file.</h3>
 <blockquote class="blockquote">
 <p>• Read in the data from the 2nd sheet. This should return a data frame with one column containing alternative versions of the variable names. • Grab that column and overwrite the current column names (colnames()) of your white wine tibble</p>
 </blockquote>
@@ -480,8 +474,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation." class="level2">
-<h2 class="anchored" data-anchor-id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation.">3. Lastly, add a column to this data set to indicate the wines are white. That is, add a column that has values of ‘white’ for every observation.</h2>
+<section id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation." class="level3">
+<h3 class="anchored" data-anchor-id="lastly-add-a-column-to-this-data-set-to-indicate-the-wines-are-white.-that-is-add-a-column-that-has-values-of-white-for-every-observation.">3. Lastly, add a column to this data set to indicate the wines are white. That is, add a column that has values of ‘white’ for every observation.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> white_wine_data[<span class="dv">1</span>]){</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  white_wine_data<span class="sc">$</span>color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"white"</span>)</span>
@@ -509,8 +503,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="there-is-a-semi-colon-delimited-version-of-the-red-wine-data-set-available-at-httpswww4.stat.ncsu.eduonlinedatasetsred-wine.csv." class="level2">
-<h2 class="anchored" data-anchor-id="there-is-a-semi-colon-delimited-version-of-the-red-wine-data-set-available-at-httpswww4.stat.ncsu.eduonlinedatasetsred-wine.csv.">4. There is a semi-colon delimited version of the red wine data set available at https://www4.stat.ncsu.edu/~online/datasets/red-wine.csv.</h2>
+<section id="there-is-a-semi-colon-delimited-version-of-the-red-wine-data-set-available-at-httpswww4.stat.ncsu.eduonlinedatasetsred-wine.csv." class="level3">
+<h3 class="anchored" data-anchor-id="there-is-a-semi-colon-delimited-version-of-the-red-wine-data-set-available-at-httpswww4.stat.ncsu.eduonlinedatasetsred-wine.csv.">4. There is a semi-colon delimited version of the red wine data set available at https://www4.stat.ncsu.edu/~online/datasets/red-wine.csv.</h3>
 <blockquote class="blockquote">
 <p>• Read this in using the readr package. Be careful that the columns are read in as the correct type! • You should replace the variable names as done above • You should append a column denoting the type as “red”</p>
 </blockquote>
@@ -547,9 +541,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   color &lt;chr&gt;</code></pre>
 </div>
 </div>
-<ol start="5" type="1">
-<li>Combine these two data sets into one data set. They both have the exact same columns so this is an easy append task! &gt; • Use the dplyr::bind_rows() function (see the help) to create one tibble containing all of the wine data.</li>
-</ol>
+</section>
+<section id="combine-these-two-data-sets-into-one-data-set.-they-both-have-the-exact-same-columns-so-this-is-an-easy-append-task-use-the-dplyrbind_rows-function-see-the-help-to-create-one-tibble-containing-all-of-the-wine-data." class="level3">
+<h3 class="anchored" data-anchor-id="combine-these-two-data-sets-into-one-data-set.-they-both-have-the-exact-same-columns-so-this-is-an-easy-append-task-use-the-dplyrbind_rows-function-see-the-help-to-create-one-tibble-containing-all-of-the-wine-data.">5. Combine these two data sets into one data set. They both have the exact same columns so this is an easy append task! &gt; • Use the dplyr::bind_rows() function (see the help) to create one tibble containing all of the wine data.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(white_wine_data, red_wine_data)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -574,9 +568,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   color &lt;chr&gt;</code></pre>
 </div>
 </div>
-<ol start="6" type="1">
-<li>Start a chain onr your new combined data object to filter the data to only look at high-quality wines (quality &gt; 6.5) and wines that have a reasonable alcohol value (alcohol &lt; 132).</li>
-</ol>
+</section>
+<section id="start-a-chain-onr-your-new-combined-data-object-to-filter-the-data-to-only-look-at-high-quality-wines-quality-6.5-and-wines-that-have-a-reasonable-alcohol-value-alcohol-132." class="level3">
+<h3 class="anchored" data-anchor-id="start-a-chain-onr-your-new-combined-data-object-to-filter-the-data-to-only-look-at-high-quality-wines-quality-6.5-and-wines-that-have-a-reasonable-alcohol-value-alcohol-132.">6. Start a chain onr your new combined data object to filter the data to only look at high-quality wines (quality &gt; 6.5) and wines that have a reasonable alcohol value (alcohol &lt; 132).</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,9 +594,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   color &lt;chr&gt;</code></pre>
 </div>
 </div>
-<ol start="7" type="1">
-<li>Continue your chain to now sort the data from highest quality to lowest.</li>
-</ol>
+</section>
+<section id="continue-your-chain-to-now-sort-the-data-from-highest-quality-to-lowest." class="level3">
+<h3 class="anchored" data-anchor-id="continue-your-chain-to-now-sort-the-data-from-highest-quality-to-lowest.">7. Continue your chain to now sort the data from highest quality to lowest.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
@@ -627,9 +621,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   color &lt;chr&gt;</code></pre>
 </div>
 </div>
-<ol start="8" type="1">
-<li>Continue your chain to select only the variables that contain acid, the alcohol variable, the type variable, and the quality variable.</li>
-</ol>
+</section>
+<section id="continue-your-chain-to-select-only-the-variables-that-contain-acid-the-alcohol-variable-the-type-variable-and-the-quality-variable." class="level3">
+<h3 class="anchored" data-anchor-id="continue-your-chain-to-select-only-the-variables-that-contain-acid-the-alcohol-variable-the-type-variable-and-the-quality-variable.">8. Continue your chain to select only the variables that contain acid, the alcohol variable, the type variable, and the quality variable.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="sc">|&gt;</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
@@ -652,9 +646,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 1,196 more rows</code></pre>
 </div>
 </div>
-<ol start="9" type="1">
-<li>Continue your chain to add the mean and standard deviation of the alcohol variable to the data set for each setting of the quality variable.</li>
-</ol>
+</section>
+<section id="continue-your-chain-to-add-the-mean-and-standard-deviation-of-the-alcohol-variable-to-the-data-set-for-each-setting-of-the-quality-variable." class="level3">
+<h3 class="anchored" data-anchor-id="continue-your-chain-to-add-the-mean-and-standard-deviation-of-the-alcohol-variable-to-the-data-set-for-each-setting-of-the-quality-variable.">9. Continue your chain to add the mean and standard deviation of the alcohol variable to the data set for each setting of the quality variable.</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>wine_data <span class="ot">&lt;-</span> wine_data <span class="sc">|&gt;</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(quality <span class="sc">&gt;</span> <span class="fl">6.5</span>, alcohol <span class="sc">&lt;</span> <span class="dv">132</span>) <span class="sc">|&gt;</span></span>
@@ -685,6 +679,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 1 more variable: alcohol_sd &lt;dbl&gt;</code></pre>
 </div>
 </div>
+</section>
 </section>
 <section id="task-3-database-practice" class="level1">
 <h1>Task 3: Database Practice</h1>
@@ -746,6 +741,161 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="repeat-the-above-by-using-the-sql-function-within-tbl-here-you-have-to-write-actual-sql." class="level3">
 <h3 class="anchored" data-anchor-id="repeat-the-above-by-using-the-sql-function-within-tbl-here-you-have-to-write-actual-sql.">3. Repeat the above by using the sql() function within tbl() (here you have to write actual SQL!).</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl</span>(con, <span class="fu">sql</span>(</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"SELECT *</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="st">  FROM `Teams`</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="st">  WHERE (`yearID` = 2015.0)"</span>)</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   SQL [?? x 48]
+# Database: sqlite 3.46.0 [S:\ST588-601\Homework3\lahman.db]
+   yearID lgID  teamID franchID divID  Rank     G Ghome     W     L DivWin WCWin
+    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+ 1   2015 NL    ARI    ARI      W         3   162    81    79    83 N      N    
+ 2   2015 NL    ATL    ATL      E         4   162    81    67    95 N      N    
+ 3   2015 AL    BAL    BAL      E         3   162    78    81    81 N      N    
+ 4   2015 AL    BOS    BOS      E         5   162    81    78    84 N      N    
+ 5   2015 AL    CHA    CHW      C         4   162    81    76    86 N      N    
+ 6   2015 NL    CHN    CHC      C         3   162    81    97    65 N      Y    
+ 7   2015 NL    CIN    CIN      C         5   162    81    64    98 N      N    
+ 8   2015 AL    CLE    CLE      C         3   161    80    81    80 N      N    
+ 9   2015 NL    COL    COL      W         5   162    81    68    94 N      N    
+10   2015 AL    DET    DET      C         5   161    81    74    87 N      N    
+# ℹ more rows
+# ℹ 36 more variables: LgWin &lt;chr&gt;, WSWin &lt;chr&gt;, R &lt;int&gt;, AB &lt;int&gt;, H &lt;int&gt;,
+#   X2B &lt;int&gt;, X3B &lt;int&gt;, HR &lt;int&gt;, BB &lt;int&gt;, SO &lt;int&gt;, SB &lt;int&gt;, CS &lt;int&gt;,
+#   HBP &lt;int&gt;, SF &lt;int&gt;, RA &lt;int&gt;, ER &lt;int&gt;, ERA &lt;dbl&gt;, CG &lt;int&gt;, SHO &lt;int&gt;,
+#   SV &lt;int&gt;, IPouts &lt;int&gt;, HA &lt;int&gt;, HRA &lt;int&gt;, BBA &lt;int&gt;, SOA &lt;int&gt;, E &lt;int&gt;,
+#   DP &lt;int&gt;, FP &lt;dbl&gt;, name &lt;chr&gt;, park &lt;chr&gt;, attendance &lt;int&gt;, BPF &lt;int&gt;,
+#   PPF &lt;int&gt;, teamIDBR &lt;chr&gt;, teamIDlahman45 &lt;chr&gt;, teamIDretro &lt;chr&gt;</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="either-use-dplyr-or-write-sql-queries-for-the-rest-of-these-questions" class="level2">
+<h2 class="anchored" data-anchor-id="either-use-dplyr-or-write-sql-queries-for-the-rest-of-these-questions">Either use dplyr or write SQL queries for the rest of these questions!</h2>
+<section id="return-all-of-the-players-in-the-hall-of-fame-the-year-they-were-voted-into-the-hall-of-fame-and-their-category-only-those-three-variables.-see-the-halloffame-table-the-inducted-variable-is-important-here." class="level3">
+<h3 class="anchored" data-anchor-id="return-all-of-the-players-in-the-hall-of-fame-the-year-they-were-voted-into-the-hall-of-fame-and-their-category-only-those-three-variables.-see-the-halloffame-table-the-inducted-variable-is-important-here.">4. Return all of the players in the hall of fame, the year they were voted into the hall of fame, and their category (only those three variables!). See the HallOfFame table, the inducted variable is important here.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>hall_of_fame <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="st">"HallOfFame"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(playerID, yearID, category)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>hall_of_fame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   SQL [?? x 3]
+# Database: sqlite 3.46.0 [S:\ST588-601\Homework3\lahman.db]
+   playerID  yearID category
+   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;   
+ 1 cobbty01    1936 Player  
+ 2 ruthba01    1936 Player  
+ 3 wagneho01   1936 Player  
+ 4 mathech01   1936 Player  
+ 5 johnswa01   1936 Player  
+ 6 lajoina01   1936 Player  
+ 7 speaktr01   1936 Player  
+ 8 youngcy01   1936 Player  
+ 9 hornsro01   1936 Player  
+10 cochrmi01   1936 Player  
+# ℹ more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="combine-the-table-from-the-previous-question-with-the-people-table-in-order-to-have-the-namefirst-and-namelast-names-added-to-what-was-returned-above." class="level3">
+<h3 class="anchored" data-anchor-id="combine-the-table-from-the-previous-question-with-the-people-table-in-order-to-have-the-namefirst-and-namelast-names-added-to-what-was-returned-above.">5. Combine the table from the previous question with the People table in order to have the nameFirst and nameLast names added to what was returned above.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>people <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="st">"People"</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>hall_of_fame <span class="ot">&lt;-</span> hall_of_fame <span class="sc">|&gt;</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(people <span class="sc">|&gt;</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(playerID, nameFirst, nameLast)</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(playerID)`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>hall_of_fame</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   SQL [?? x 5]
+# Database: sqlite 3.46.0 [S:\ST588-601\Homework3\lahman.db]
+   playerID  yearID category nameFirst nameLast 
+   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;    
+ 1 cobbty01    1936 Player   Ty        Cobb     
+ 2 ruthba01    1936 Player   Babe      Ruth     
+ 3 wagneho01   1936 Player   Honus     Wagner   
+ 4 mathech01   1936 Player   Christy   Mathewson
+ 5 johnswa01   1936 Player   Walter    Johnson  
+ 6 lajoina01   1936 Player   Nap       Lajoie   
+ 7 speaktr01   1936 Player   Tris      Speaker  
+ 8 youngcy01   1936 Player   Cy        Young    
+ 9 hornsro01   1936 Player   Rogers    Hornsby  
+10 cochrmi01   1936 Player   Mickey    Cochrane 
+# ℹ more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="return-only-the-playerid-manager-id-in-this-case-g-w-and-l-columns-from-the-managers-table.-use-chaining-to-then" class="level3">
+<h3 class="anchored" data-anchor-id="return-only-the-playerid-manager-id-in-this-case-g-w-and-l-columns-from-the-managers-table.-use-chaining-to-then">6. Return only the playerID (manager ID in this case), G, W, and L columns from the Managers table. Use chaining to then:</h3>
+<blockquote class="blockquote">
+<p>• Determine the overall win/loss records (sum of wins and sum of losses) for each of these hall of fame managers. – We haven’t quite covered this so I’ll help out. We want to use group_by() with summarize() rather than mutate(). Something like this: tbl(con, “Managers”) |&gt; select(…) |&gt; group_by(playerID) |&gt; summarize(G_managed = sum(G, na.rm = TRUE), Total_W = sum(W, na.rm = TRUE), Total_L = sum(L, na.rm = TRUE)) • Create a new variable that is the career win/loss percentage (Total_W/G_managed). (Note: I did this after collect() otherwise the column type has to be set. . . ) • Sort the resulting data by the win/loss percentage variable (from largest to smallest).</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>managers <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="st">"Managers"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(playerID, G, W, L) <span class="sc">|&gt;</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(playerID)<span class="sc">|&gt;</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">G_managed =</span> <span class="fu">sum</span>(G, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total_W =</span> <span class="fu">sum</span>(W, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total_L =</span> <span class="fu">sum</span>(L, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Total_W/G_managed"</span> <span class="ot">=</span> Total_W <span class="sc">/</span> G_managed</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>         ) <span class="sc">|&gt;</span></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total_W<span class="sc">/</span>G_managed))</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>managers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 749 × 5
+   playerID  G_managed Total_W Total_L `Total_W/G_managed`
+   &lt;chr&gt;         &lt;int&gt;   &lt;int&gt;   &lt;int&gt;               &lt;dbl&gt;
+ 1 bensove01         1       1       0                   1
+ 2 burwebi01         1       1       0                   1
+ 3 cohenan01         1       1       0                   1
+ 4 ebeldi99          3       3       0                   1
+ 5 falkbi01          1       1       0                   1
+ 6 hardeme01         3       3       0                   1
+ 7 simmote01         1       1       0                   1
+ 8 steinte01         2       2       0                   1
+ 9 sukefcl01         2       2       0                   1
+10 tamarjo01         1       1       0                   1
+# ℹ 739 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="use-the-results-from-the-previous-two-questions-to-answer-this-one-return-information-for-only-the-people-that-managed-a-team-and-were-inducted-into-the-hall-of-fame-regardless-of-their-category-in-the-hall-of-fame---you-want-to-return-all-people-in-the-hall-of-fame-that-ever-managed-at-all.-just-return-all-of-the-variables-from-both-of-the-above-two-questions---9-total-columns" class="level3">
+<h3 class="anchored" data-anchor-id="use-the-results-from-the-previous-two-questions-to-answer-this-one-return-information-for-only-the-people-that-managed-a-team-and-were-inducted-into-the-hall-of-fame-regardless-of-their-category-in-the-hall-of-fame---you-want-to-return-all-people-in-the-hall-of-fame-that-ever-managed-at-all.-just-return-all-of-the-variables-from-both-of-the-above-two-questions---9-total-columns">7. Use the results from the previous two questions to answer this one! Return information for only the people that managed a team and were inducted into the hall of fame (regardless of their category in the hall of fame - you want to return all people in the hall of fame that ever managed at all). (Just return all of the variables from both of the above two questions - 9 total columns)</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>managers <span class="sc">|&gt;</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(hall_of_fame, </span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="fu">join_by</span>(playerID <span class="sc">==</span> playerID),</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">copy =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,135 × 9
+   playerID  G_managed Total_W Total_L `Total_W/G_managed` yearID category
+   &lt;chr&gt;         &lt;int&gt;   &lt;int&gt;   &lt;int&gt;               &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;   
+ 1 hardeme01         3       3       0                   1   1949 Player  
+ 2 hardeme01         3       3       0                   1   1950 Player  
+ 3 hardeme01         3       3       0                   1   1951 Player  
+ 4 hardeme01         3       3       0                   1   1952 Player  
+ 5 hardeme01         3       3       0                   1   1953 Player  
+ 6 hardeme01         3       3       0                   1   1958 Player  
+ 7 hardeme01         3       3       0                   1   1960 Player  
+ 8 hardeme01         3       3       0                   1   1962 Player  
+ 9 hardeme01         3       3       0                   1   1964 Player  
+10 hardeme01         3       3       0                   1   1964 Player  
+# ℹ 1,125 more rows
+# ℹ 2 more variables: nameFirst &lt;chr&gt;, nameLast &lt;chr&gt;</code></pre>
+</div>
+</div>
 
 
 </section>
